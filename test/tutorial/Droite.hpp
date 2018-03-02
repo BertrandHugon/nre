@@ -10,7 +10,9 @@ class Droite {
 		~Droite();
 
 		// (ym - ya)(xb - xa) - (xm - xa)(yb - ya)
-		inline long long int Fonction ( long long int xm, long long int ym); 
+		inline long long int Fonction ( long long int xm, long long int ym){
+	return (ym - ya) * (xb - xa) - (xm - xa) * (yb - ya);
+};
 	private:
 
 	// Droite passant par A (xa, ya) et B ( xb, yb)
@@ -20,4 +22,8 @@ class Droite {
 	long long int yb;
 
 };
-
+#if 0
+long long int Droite::Fonction ( long long int xm, long long int ym) {
+	return (ym - ya) * (xb - xa) - (xm - xa) * (yb - ya);
+}
+#endif

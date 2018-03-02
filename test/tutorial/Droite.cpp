@@ -19,8 +19,9 @@ Droite::Droite( Droite& dd) :
 	
 Droite::~Droite() {};
 
+#if 0
 long long int Droite::Fonction ( long long int xm, long long int ym) {
 	return (ym - ya) * (xb - xa) - (xm - xa) * (yb - ya);
 }
-
+#endif
 
