@@ -5,15 +5,18 @@ SOURCES := Droite.cpp DemiPlan.cpp Flago.cpp
 
 OBJETS := Droite.o DemiPlan.o Flago.o
 
-INCDIRS := -I/usr/include/opencv2/
+INCDIRS := -I/usr/include/
 
 BINAIRES := Flago
 
-LIBRAIRIES := -lopencv_imgproc -lopencv_core -lc
+LIBRAIRIES := -lopencv_imgproc -lopencv_core -lopencv_highgui -lc
 
 LD_FLAGS := -static-libgcc -static-libstdc++
 
 all: $(BINAIRES)
+
+test: $(BINAIRES)
+	./$^
 
 $(BINAIRES) : $(OBJETS)
 	g++ $(OBJETS) $(LIBRAIRIES) $(LD_FLAGS) -o $@
